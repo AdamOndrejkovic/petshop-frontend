@@ -1,0 +1,42 @@
+.title{
+  text-align: center;
+}
+
+.pet-box{
+  padding: 25px 15px;
+}
+
+.pet-box ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.pet-box ul li {
+  list-style-type: none;
+  width: 250px;
+  text-align: center;
+}
+
+.pet-card{
+  border-radius: 15px;
+  margin: 15px 25px;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.pet-card img{
+  padding: 5px;
+  height: 150px;
+  width: 150px;
+  border-radius: 73% 27% 55% 45% / 23% 53% 47% 77% ;
+}
+
+.pet-card p{
+  padding: 5px;
+}
+
+.pet-card:hover{
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+}

@@ -1,0 +1,14 @@
+<div>
+  <h2 class="title">Pets overview</h2>
+  <div class="pet-box">
+    <ul>
+      <li *ngFor="let pet of pets">
+        <div class="pet-card">
+          <img [src]="pet.id % 2 ==0 ? image1 : image0" alt="PetImage">
+          <h3>Name: {{pet.name}}</h3>
+          <p>Price: {{pet.price}} €</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

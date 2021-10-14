@@ -1,0 +1,48 @@
+#tsparticles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+.container {
+  padding: 25px 15px;
+}
+
+.container ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.container ul li {
+  width: 250px;
+  height: 200px;
+  margin: 20px;
+  border-radius: 20px;
+  list-style-type: none;
+  text-align: center;
+}
+
+.container ul li img {
+  height: 125px;
+  width: 125px;
+}
+
+.container ul li h5 {
+  padding: 0;
+  margin: 0;
+}
+
+.container ul li p {
+  padding: 0;
+}
+.complete {
+  border: 2px solid green;
+}
+
+.incomplete {
+  border: 2px solid red;
+}

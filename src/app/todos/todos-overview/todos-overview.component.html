@@ -1,0 +1,34 @@
+<div class="container">
+  <div>
+    <p (click)="ChangeShowValue('users')">Show users</p>
+    <hr>
+    <p (click)="ChangeShowValue('todos')">Show todos</p>
+  </div>
+  <div *ngIf="show === 'users'">
+    <select name="" [(ngModel)]="userIdUsers" (change)="getUsersValue()">
+      <option *ngFor="let user of users" [value]="user.id">{{user.name}}</option>
+    </select>
+
+    {{userIdUsers}}
+
+  </div>
+
+  <div *ngIf="show === 'todos'">
+    <input type="number" (change)="getTodosForUsers()" [(ngModel)]="userId">
+    <!--<input type="text" (change)="getTodosForUsers()" [(ngModel)]="completed">-->
+    <!-- <ng-particles  id="tsparticles" [options]="options"></ng-particles>-->
+    <p *ngIf="userId > 10">
+      No users where found
+    </p>
+    <ul>
+      <li
+        *ngFor="let todo of todos"
+        [ngClass]="{'complete' : todo.completed === true, 'incomplete' : todo.completed === false}">
+        <img [src]="todo.completed  === true ? gifComplete : gifIncomplete" alt="PetImage">
+        <h5>{{todo.title}}</h5>
+        <p *ngIf="todo.completed === true">Your todo is completed</p>
+        <p *ngIf="todo.completed === false">Your todo is not completed</p>
+      </li>
+    </ul>
+  </div>
+</div>
